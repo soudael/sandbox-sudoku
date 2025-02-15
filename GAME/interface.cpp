@@ -1,38 +1,7 @@
 #include <iostream>
-#include <ctime>
 #include <conio.h>
 #include <windows.h>
-
-void updateChanges(int x, int y);
-void displayMatrix(char (&cursorPosition)[9][9], int (&matrix)[9][9]);
-void changePosition(int playerInput, char (&cursorPosition)[9][9]);
-void insertNumber(int playerInput, int (&matrix)[9][9], char (&cursorPosition)[9][9]);
-void readMovement(char (&cursorPosition)[9][9], int (&matrix)[9][9]);
-
-int main()
-{
-    int matrix[9][9];
-    char cursorPosition[9][9];
-
-    for(int i=0; i<9; i++){
-        for(int j=0; j<9; j++){
-            matrix[i][j] = 0;
-            cursorPosition[i][j] = '\0';
-        }
-    }
-    cursorPosition[4][4] = '>';
-
-    system("cls");
-
-    while(1)
-    {
-        updateChanges(0, 0);
-        displayMatrix(cursorPosition, matrix);
-        readMovement(cursorPosition, matrix);
-    }
-
-    return 0;
-}
+#include "interface.hpp"
 
 void updateChanges(int x, int y)
 {
@@ -209,3 +178,4 @@ void readMovement(char (&cursorPosition)[9][9], int (&matrix)[9][9])
         insertNumber(playerInput, matrix, cursorPosition);
     }
 }
+;
