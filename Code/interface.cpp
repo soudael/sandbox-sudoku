@@ -1,28 +1,28 @@
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
-#include "interface.hpp"
+#include "interface.h"
 
-void updateChanges(int x, int y)
-{
+// update the content in terminal
+void updateChanges(int x, int y){
     COORD coord = { (SHORT)x, (SHORT)y };
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-void displayMatrix(char (&cursorPosition)[9][9], int (&matrix)[9][9])
-{
+// display board matrix after every update
+void displayMatrix(char (&cursorPosition)[9][9], int (&board)[9][9]){
     std::cout << " \xC9\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCB\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCB\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xBB\n";
     for(int i=0; i<9; i++){
         if(i+1 % 3 != 0) std::cout << " \xBA ";
 
         for(int j=0; j<9; j++){
             if(cursorPosition[i][j] != '\0'){
-                std::cout << cursorPosition[i][j];
+                std::cout << "\033[34m" << cursorPosition[i][j] << "\033[0m";
             } else {
-                if(matrix[i][j] == 0){
+                if(board[i][j] == 0){
                     std::cout << '\xFA';
                 } else {
-                    std::cout << matrix[i][j];
+                    std::cout << board[i][j];
                 }
             }
 
@@ -38,8 +38,8 @@ void displayMatrix(char (&cursorPosition)[9][9], int (&matrix)[9][9])
     std::cout << " \xC8\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCA\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xCA\xCD\xCD\xCD\xCD\xCD\xCD\xCD\xBC\n";
 }
 
-void changePosition(int playerInput, char (&cursorPosition)[9][9])
-{
+// calculates player's input and its intended movement
+void changePosition(int playerInput, char (&cursorPosition)[9][9]){
     int newI, newJ;
 
     for(int i=0; i<9; i++){
@@ -124,24 +124,24 @@ void changePosition(int playerInput, char (&cursorPosition)[9][9])
     }
 }
 
-void insertNumber(int playerInput, int (&matrix)[9][9], char (&cursorPosition)[9][9])
-{
+// inserts number if player's mean to
+void insertNumber(int playerInput, int (&board)[9][9], char (&cursorPosition)[9][9]){
     for(int i=0; i<9; i++){
         for(int j=0; j<9; j++){
             if(cursorPosition[i][j] == '>'){
-                matrix[i][j+1] = playerInput - 48;
+                board[i][j+1] = playerInput - 48;
                 break;
             }
             if(cursorPosition[i][j] == '<'){
-                matrix[i][j-1] = playerInput - 48;
+                board[i][j-1] = playerInput - 48;
                 break;
             }
         }
     }
 }
 
-void readMovement(char (&cursorPosition)[9][9], int (&matrix)[9][9])
-{
+// read player's movement
+void readMovement(char (&cursorPosition)[9][9], int (&board)[9][9]){
     int playerInput;
 
     playerInput = _getch();
@@ -175,7 +175,6 @@ void readMovement(char (&cursorPosition)[9][9], int (&matrix)[9][9])
             }
         }
     } else {
-        insertNumber(playerInput, matrix, cursorPosition);
+        insertNumber(playerInput, board, cursorPosition);
     }
 }
-;
