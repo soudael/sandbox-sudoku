@@ -142,9 +142,7 @@ void insertNumber(int playerInput, int (&board)[9][9], char (&cursorPosition)[9]
 
 // read player's movement
 void readMovement(char (&cursorPosition)[9][9], int (&board)[9][9]){
-    int playerInput;
-
-    playerInput = _getch();
+    int playerInput = _getch();
 
     if(playerInput < 49 || playerInput > 57)
     {
