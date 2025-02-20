@@ -1,7 +1,5 @@
 {
     "files.associations": {
-        "ctime": "cpp",
-        "iostream": "cpp",
         "array": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
@@ -17,6 +15,7 @@
         "cstdint": "cpp",
         "cstdio": "cpp",
         "cstdlib": "cpp",
+        "ctime": "cpp",
         "cwchar": "cpp",
         "cwctype": "cpp",
         "deque": "cpp",
@@ -39,24 +38,18 @@
         "utility": "cpp",
         "format": "cpp",
         "initializer_list": "cpp",
-        "iomanip": "cpp",
         "iosfwd": "cpp",
+        "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
         "new": "cpp",
         "numbers": "cpp",
         "ostream": "cpp",
         "span": "cpp",
-        "sstream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "text_encoding": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp",
-        "chrono": "cpp",
-        "ratio": "cpp",
-        "semaphore": "cpp",
-        "stop_token": "cpp",
-        "thread": "cpp"
+        "variant": "cpp"
     }
 }
