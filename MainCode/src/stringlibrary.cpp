@@ -5,10 +5,10 @@
 #include <windows.h>
 #include "stringlibrary.h"
 
-using vector_string = std::vector<std::string>;
+using vector_str = std::vector<std::string>;
 std::string null = "";
 
-vector_string mainMenuContent(){
+vector_str mainMenuContent() {
     std::string
     welcome = "\xFA WELCOME TO SUDOKU GAME \xFA\n",
     start = "Start",
@@ -17,21 +17,21 @@ vector_string mainMenuContent(){
     credits = "Credits",
     exit = "Exit Game";
 
-    vector_string options = {null, welcome, start, settings, rules, credits, exit, null};
+    vector_str options = {null, welcome, start, settings, rules, credits, exit, null};
     return options;
 }
 
-vector_string settingsMenuContent(){
+vector_str settingsMenuContent() {
     std::string
     back = "GO BACK\n",
     theme = "Change Theme:",
     notes = "Enable Notes:";
 
-    vector_string options = {null, back, theme, notes, null};
+    vector_str options = {null, back, theme, notes, null};
     return options;
 }
 
-vector_string rulesMenuContent(){
+vector_str rulesMenuContent() {
     std::string
     back = "GO BACK",
     ruleTitle = "\n-= CLASSIC SUDOKU RULES =-\n",
@@ -42,11 +42,11 @@ vector_string rulesMenuContent(){
     ruleFour = "\n\t\xFA There is no repetition in any 3x3 box, row or column!";
 
     std::string singleText = ruleTitle + ruleText + ruleOne + ruleTwo + ruleThree + ruleFour;
-    vector_string options = {null, back, singleText};
+    vector_str options = {null, back, singleText};
     return options;
 }
 
-vector_string creditsMenuContent(){
+vector_str creditsMenuContent() {
     std::string
     back = "GO BACK",
     creator = "\nCreated by: @soudael",
@@ -57,7 +57,6 @@ vector_string creditsMenuContent(){
     license = "\nVisual Studio Code 2025";
 
     std::string singleText = creator + tools + libraries + personal_lb + contact + license;
-    vector_string options = {null, back, singleText};
+    vector_str options = {null, back, singleText};
     return options;
 }
-;

@@ -1,14 +1,14 @@
 #include <vector>
 #include <string>
 
-using vector_string = std::vector<std::string>;
-
 #ifndef STRINGLIBRARY_H
 #define STRINGLIBRARY_H
 
-vector_string mainMenuContent();
-vector_string settingsMenuContent();
-vector_string rulesMenuContent();
-vector_string creditsMenuContent();
+using vector_str = std::vector<std::string>;
+
+vector_str mainMenuContent();
+vector_str settingsMenuContent();
+vector_str rulesMenuContent();
+vector_str creditsMenuContent();
 
 #endif
