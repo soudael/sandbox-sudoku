@@ -1,8 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <conio.h>
-#include <windows.h>
 #include "gameinterface.h"
 
 void updateTerminal(int x, int y) {

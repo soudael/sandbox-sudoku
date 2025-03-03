@@ -1,18 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <random>
 #include "generatenumbers.h"
-
-bool numberGenerationSuccessful(duo_vector<int> &sudokuBoard) {
-    // Verifies if the board was successfully filled with random numbers in correct positions
-    for (int i=0; i<9; i++) {
-        for (int j=0; j<9; j++) {
-            if (sudokuBoard[i][j] == 0) return false;
-        }
-    }
-    return true;
-}
 
 void generateBoardNumbers(duo_vector<int> &sudokuBoard, trio_vector<int> &sudokuSquare) {
     std::random_device rd;
@@ -21,11 +7,12 @@ void generateBoardNumbers(duo_vector<int> &sudokuBoard, trio_vector<int> &sudoku
         return std::uniform_int_distribution<int> (min, max)(gen);
     };
 
-    // Set/Reset both 9x9 board and 3x3 squares values if the previous board was a failed generation
-    while (!numberGenerationSuccessful(sudokuBoard)) {
+    // Number generation, setups both matrices with zero from start
+    bool successfulAttempt = false;
+    while (!successfulAttempt) {
         sudokuBoard.assign(9, std::vector<int>(9, 0));
         sudokuSquare.assign(3, duo_vector<int>(3, std::vector<int>(9, 0)));
-        bool successfulAttempt = true;
+        successfulAttempt = true;
 
         // Generates random position in a row for a column
         for (int number=1; number<10 && successfulAttempt; number++) {

@@ -1,11 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <conio.h>
-#include <windows.h>
 #include "lobbyrendering.h"
-#include "stringlibrary.h"
-#include "gameinterface.h"
 
 void clearConsole() {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);

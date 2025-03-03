@@ -1,9 +1,14 @@
-#include <vector>
-#include <string>
-#include "stringlibrary.h"
-
 #ifndef LOBBYRENDERING_H
 #define LOBBYRENDERING_H
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <conio.h>
+#include <windows.h>
+#include "lobbyrendering.h"
+#include "stringlibrary.h"
+#include "gameinterface.h"
 
 using vector_str = std::vector<std::string>;
 

@@ -1,8 +1,12 @@
-#include <vector>
-#include <string>
-
 #ifndef GAMEINTERFACE_H
 #define GAMEINTERFACE_H
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <conio.h>
+#include <windows.h>
+#include "gameinterface.h"
 
 template <typename dt>
 using duo_vector = std::vector<std::vector<dt>>;

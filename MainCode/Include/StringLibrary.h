@@ -1,8 +1,12 @@
-#include <vector>
-#include <string>
-
 #ifndef STRINGLIBRARY_H
 #define STRINGLIBRARY_H
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <conio.h>
+#include <windows.h>
+#include "stringlibrary.h"
 
 using vector_str = std::vector<std::string>;
 

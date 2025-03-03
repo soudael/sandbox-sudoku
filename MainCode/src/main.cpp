@@ -1,22 +1,4 @@
-// Compile with:
-// g++ -static src\stringlibrary.cpp src\lobbyrendering.cpp src\generatenumbers.cpp src\gameinterface.cpp src\main.cpp -I Include -o sudoku.exe
-
-#include <iostream>
-#include <random>
-#include <vector>
-#include <string>
-#include <windows.h>
-#include <conio.h>
-#include "gameinterface.h"
-#include "generatenumbers.h"
-#include "lobbyrendering.h"
-#include "stringlibrary.h"
-
-template <typename dt>
-using duo_vector = std::vector<std::vector<dt>>;
-template <typename dt>
-using trio_vector = std::vector<duo_vector<dt>>;
-using vector_str = std::vector<std::string>;
+#include "sourcelibrarygroup.h"
 
 int main() {
     SetConsoleOutputCP(850);
