@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/sudoku.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\sudoku.dir\\src\\gameinterface.cpp.obj -c C:\\Users\\cdann\\OneDrive\\Documentos\\VSCode\\C++\\sudoku\\src\\gameinterface.cpp",
+  "file": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/src/gameinterface.cpp",
+  "output": "CMakeFiles/sudoku.dir/src/gameinterface.cpp.obj"
+},
+{
+  "directory": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/sudoku.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\sudoku.dir\\src\\generatenumbers.cpp.obj -c C:\\Users\\cdann\\OneDrive\\Documentos\\VSCode\\C++\\sudoku\\src\\generatenumbers.cpp",
+  "file": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/src/generatenumbers.cpp",
+  "output": "CMakeFiles/sudoku.dir/src/generatenumbers.cpp.obj"
+},
+{
+  "directory": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/sudoku.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\sudoku.dir\\src\\lobbyrendering.cpp.obj -c C:\\Users\\cdann\\OneDrive\\Documentos\\VSCode\\C++\\sudoku\\src\\lobbyrendering.cpp",
+  "file": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/src/lobbyrendering.cpp",
+  "output": "CMakeFiles/sudoku.dir/src/lobbyrendering.cpp.obj"
+},
+{
+  "directory": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/sudoku.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\sudoku.dir\\src\\main.cpp.obj -c C:\\Users\\cdann\\OneDrive\\Documentos\\VSCode\\C++\\sudoku\\src\\main.cpp",
+  "file": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/src/main.cpp",
+  "output": "CMakeFiles/sudoku.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/sudoku.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\sudoku.dir\\src\\stringlibrary.cpp.obj -c C:\\Users\\cdann\\OneDrive\\Documentos\\VSCode\\C++\\sudoku\\src\\stringlibrary.cpp",
+  "file": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/src/stringlibrary.cpp",
+  "output": "CMakeFiles/sudoku.dir/src/stringlibrary.cpp.obj"
+}
+]

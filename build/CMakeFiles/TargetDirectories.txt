@@ -1,0 +1,3 @@
+C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/build/CMakeFiles/sudoku.dir
+C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/build/CMakeFiles/edit_cache.dir
+C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/build/CMakeFiles/rebuild_cache.dir
