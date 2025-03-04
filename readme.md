@@ -3,12 +3,12 @@
 Sudoku is a terminal based game made for running classic sudoku game.\
 It is written with **C++17** using stardard libraries.\
 Running only in **Windows** currently.\
-You can contact me for more information about this code and future projects in my instagram direct[^1].
+You can contact me for more information about this code and future projects in my instagram direct[^ig].
 
 - [x] Menu navigation.
 - [ ] Functional menu options.
 - [x] Board with random numbers following classic sudoku rules.
-functioning
+- [ ] Functional gameplay and note mechanic.
 
 
 ### Installation
@@ -60,7 +60,7 @@ g++ stringlibrary.cpp lobbyrendering.cpp generatenumbers.cpp gameinterface.cpp m
 > This is my very next project after I finish this game code. It may take a while, but it will be worth it I promise.
 
 > [!TIP]
-> You can contact me by my public email[^2].
+> You can contact me by my public email[^email].
 
-[^2]: instagram.com/solynael
-[^2]: carlosdaelcds@gmail.com
+[^ig]: instagram.com/solynael
+[^email]: carlosdaelcds@gmail.com
