@@ -22,12 +22,21 @@ int main() {
     trio_vector<int> sudokuSquare(3, duo_vector<int>(3, std::vector<int>(9, 0)));
 
     generateBoardNumbers(sudokuBoard, sudokuSquare);
+    duo_vector<int> hiddenSpots = hideBoardNumbers();
+    for (int i=0; i<sudokuBoard[0].size(); i++) {
+        for (int j=0; j<sudokuBoard[0].size(); j++) {
+            if (hiddenSpots[i][j]) {
+                hiddenSpots[i][j] = sudokuBoard[i][j];
+            }
+        }
+    }
     system("cls");
 
-    while (true) {
-        updateTerminal(0, 0);
-        displayBoard(cursorPositionInGame, sudokuBoard);
-        readPlayerMovementInGame(cursorPositionInGame, sudokuBoard);
+    int status = 3, noteIsOpen = 0;
+    std::vector<int> errorList, listOfNotes;
+    while (status > 0) {
+        readAndDisplay(cursorPositionInGame, sudokuBoard, hiddenSpots, errorList, status, listOfNotes, noteIsOpen);
     }
+    std::cout << "PERDEUUU HAHAHAHAHA" << std::endl;
     return 0;
 }

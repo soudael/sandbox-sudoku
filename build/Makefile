@@ -176,6 +176,30 @@ src/generatenumbers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/src/generatenumbers.cpp.s
 .PHONY : src/generatenumbers.cpp.s
 
+src/globalfunctions.obj: src/globalfunctions.cpp.obj
+.PHONY : src/globalfunctions.obj
+
+# target to build an object file
+src/globalfunctions.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/src/globalfunctions.cpp.obj
+.PHONY : src/globalfunctions.cpp.obj
+
+src/globalfunctions.i: src/globalfunctions.cpp.i
+.PHONY : src/globalfunctions.i
+
+# target to preprocess a source file
+src/globalfunctions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/src/globalfunctions.cpp.i
+.PHONY : src/globalfunctions.cpp.i
+
+src/globalfunctions.s: src/globalfunctions.cpp.s
+.PHONY : src/globalfunctions.s
+
+# target to generate assembly for a file
+src/globalfunctions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/src/globalfunctions.cpp.s
+.PHONY : src/globalfunctions.cpp.s
+
 src/lobbyrendering.obj: src/lobbyrendering.cpp.obj
 .PHONY : src/lobbyrendering.obj
 
@@ -224,6 +248,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/specialselections.obj: src/specialselections.cpp.obj
+.PHONY : src/specialselections.obj
+
+# target to build an object file
+src/specialselections.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/src/specialselections.cpp.obj
+.PHONY : src/specialselections.cpp.obj
+
+src/specialselections.i: src/specialselections.cpp.i
+.PHONY : src/specialselections.i
+
+# target to preprocess a source file
+src/specialselections.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/src/specialselections.cpp.i
+.PHONY : src/specialselections.cpp.i
+
+src/specialselections.s: src/specialselections.cpp.s
+.PHONY : src/specialselections.s
+
+# target to generate assembly for a file
+src/specialselections.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/src/specialselections.cpp.s
+.PHONY : src/specialselections.cpp.s
+
 src/stringlibrary.obj: src/stringlibrary.cpp.obj
 .PHONY : src/stringlibrary.obj
 
@@ -263,12 +311,18 @@ help:
 	@echo ... src/generatenumbers.obj
 	@echo ... src/generatenumbers.i
 	@echo ... src/generatenumbers.s
+	@echo ... src/globalfunctions.obj
+	@echo ... src/globalfunctions.i
+	@echo ... src/globalfunctions.s
 	@echo ... src/lobbyrendering.obj
 	@echo ... src/lobbyrendering.i
 	@echo ... src/lobbyrendering.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/specialselections.obj
+	@echo ... src/specialselections.i
+	@echo ... src/specialselections.s
 	@echo ... src/stringlibrary.obj
 	@echo ... src/stringlibrary.i
 	@echo ... src/stringlibrary.s

@@ -1,11 +1,6 @@
 #include "generatenumbers.h"
 
 void generateBoardNumbers(duo_vector<int> &sudokuBoard, trio_vector<int> &sudokuSquare) {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    auto getRandomInRange = [&](int min, int max) {
-        return std::uniform_int_distribution<int> (min, max)(gen);
-    };
 
     // Number generation, setups both matrices with zero from start
     bool successfulAttempt = false;

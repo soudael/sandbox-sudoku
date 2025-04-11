@@ -13,6 +13,12 @@
 },
 {
   "directory": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/sudoku.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\sudoku.dir\\src\\globalfunctions.cpp.obj -c C:\\Users\\cdann\\OneDrive\\Documentos\\VSCode\\C++\\sudoku\\src\\globalfunctions.cpp",
+  "file": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/src/globalfunctions.cpp",
+  "output": "CMakeFiles/sudoku.dir/src/globalfunctions.cpp.obj"
+},
+{
+  "directory": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/build",
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/sudoku.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\sudoku.dir\\src\\lobbyrendering.cpp.obj -c C:\\Users\\cdann\\OneDrive\\Documentos\\VSCode\\C++\\sudoku\\src\\lobbyrendering.cpp",
   "file": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/src/lobbyrendering.cpp",
   "output": "CMakeFiles/sudoku.dir/src/lobbyrendering.cpp.obj"
@@ -22,6 +28,12 @@
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/sudoku.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\sudoku.dir\\src\\main.cpp.obj -c C:\\Users\\cdann\\OneDrive\\Documentos\\VSCode\\C++\\sudoku\\src\\main.cpp",
   "file": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/src/main.cpp",
   "output": "CMakeFiles/sudoku.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/sudoku.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\sudoku.dir\\src\\specialselections.cpp.obj -c C:\\Users\\cdann\\OneDrive\\Documentos\\VSCode\\C++\\sudoku\\src\\specialselections.cpp",
+  "file": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/src/specialselections.cpp",
+  "output": "CMakeFiles/sudoku.dir/src/specialselections.cpp.obj"
 },
 {
   "directory": "C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/build",

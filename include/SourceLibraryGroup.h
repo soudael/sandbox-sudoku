@@ -4,6 +4,7 @@
 // Standard C/C++ libraries
 #include <iostream>
 #include <random>
+#include <algorithm>
 #include <vector>
 #include <string>
 #include <windows.h>
@@ -12,8 +13,10 @@
 // Personal C/C++ libraries
 #include "gameinterface.h"
 #include "generatenumbers.h"
+#include "specialselections.h"
 #include "lobbyrendering.h"
 #include "stringlibrary.h"
+#include "globalfunctions.h"
 
 // Templates
 template <typename dt>

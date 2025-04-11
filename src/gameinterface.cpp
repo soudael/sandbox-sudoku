@@ -10,7 +10,27 @@ void printCharactersLine(char st, char nd, char rd, char df) {
     std::cout << ' ' << st << midsym(df) << nd << midsym(df) << nd << midsym(df) << rd << '\n';
 }
 
-void displayBoard(duo_vector<char> &cursorPositionInGame, duo_vector<int> &sudokuBoard) {
+void displayBoard(duo_vector<char> &cursorPositionInGame, duo_vector<int> &sudokuBoard, duo_vector<int> &hiddenSpots,
+                  std::vector<int> &errorList, int &status, std::vector<int> &listOfNotes, int &noteIsOpen) {
+    int pairNumber = 0, counter = 1;
+    duo_vector<int> tempVector(9, std::vector<int>(9));
+
+    // Verifies which number the cursors is pointing to and select every other equals in blue color
+    for (int i=0; i<9; i++) {
+        for (int j=0; j<9; j++) {
+            if (cursorPositionInGame[i][j] == '>' && hiddenSpots[i][j+1]) {
+                pairNumber = hiddenSpots[i][j+1]; 
+            } else if (cursorPositionInGame[i][j] == '<' && hiddenSpots[i][j-1]) {
+                pairNumber = hiddenSpots[i][j-1]; 
+            }
+            tempVector[i][j] = counter;
+            counter++;
+        }
+    }
+
+    int prevStatus = status;
+
+    std::cout << "Attempts Left: " << status << std::endl;
     printCharactersLine('\xC9', '\xCB', '\xBB', '\xCD');
     for (int i=0; i<9; i++) {
         std::cout << " \xBA ";
@@ -18,12 +38,29 @@ void displayBoard(duo_vector<char> &cursorPositionInGame, duo_vector<int> &sudok
         // Print cursor/number in the new position after a player's movement
         for (int j=0; j<9; j++) {
             if (cursorPositionInGame[i][j] != ' ') {
-                std::cout <<"\033[92m" << cursorPositionInGame[i][j] << "\033[0m";
+                std::cout << "\033[92m" << cursorPositionInGame[i][j] << "\033[0m";
             } else {
-                if (sudokuBoard[i][j] == 0) {
+                if (hiddenSpots[i][j] == 0) {
                     std::cout << '\xFA';
                 } else {
-                    std::cout << sudokuBoard[i][j];
+                    if (hiddenSpots[i][j] != sudokuBoard[i][j]) {
+                        std::cout << "\033[91m" << hiddenSpots[i][j] << "\033[0m";
+                        if (std::find(errorList.begin(), errorList.end(), tempVector[i][j]) == errorList.end()) {
+                            status--;
+                            errorList.push_back(tempVector[i][j]);
+                        }
+                        errorList.push_back(tempVector[i][j]);
+                    } else {
+                        if (std::find(errorList.begin(), errorList.end(), tempVector[i][j]) != errorList.end()) {
+                            errorList.erase(std::remove(errorList.begin(), errorList.end(), tempVector[i][j]),
+                            errorList.end());
+                        }
+                        if (hiddenSpots[i][j] == pairNumber) {
+                            std::cout << "\033[94m" << hiddenSpots[i][j] << "\033[0m";
+                        } else {
+                            std::cout << hiddenSpots[i][j];
+                        }
+                    }
                 }
             }
 
@@ -35,6 +72,15 @@ void displayBoard(duo_vector<char> &cursorPositionInGame, duo_vector<int> &sudok
         if (i == 2 || i == 5) printCharactersLine('\xCC', '\xCE', '\xB9', '\xCD');
     }
     printCharactersLine('\xC8', '\xCA', '\xBC', '\xCD');
+
+    // std::cout << noteIsOpen << std::endl;
+    if (noteIsOpen % 2 != 0) {
+        displayNotesList(listOfNotes);
+    }
+    if (status != prevStatus) {
+        updateTerminal(0, 0);
+        displayBoard(cursorPositionInGame, sudokuBoard, hiddenSpots, errorList, status, listOfNotes, noteIsOpen);
+    }
 }
 
 void movePlayerCursor(duo_vector<char> &cursorPositionInGame, int row, int col, int numberR, int numberC, char symbol) {
@@ -106,27 +152,27 @@ void updateCursorPosition(int playerInput, duo_vector<char> &cursorPositionInGam
     }
 }
 
-void insertNumberInBoard(int playerInput, duo_vector<int> &sudokuBoard, duo_vector<char> &cursorPositionInGame) {
-    // Inserts a number in a specific position in board after player clicked a number from 1 to 9
+void insertNumberInBoard(int playerInput, duo_vector<int> &hiddenSpots, duo_vector<char> &cursorPositionInGame) {
+    // Inserts a number in a specific position in board after player clicked a number from 0 to 9
     for (int i=0; i<9; i++) {
         for (int j=0; j<9; j++) {
             if (cursorPositionInGame[i][j] == '>') {
-                sudokuBoard[i][j+1] = playerInput - 48;
+                hiddenSpots[i][j+1] = playerInput - 48;
                 break;
             }
             if (cursorPositionInGame[i][j] == '<') {
-                sudokuBoard[i][j-1] = playerInput - 48;
+                hiddenSpots[i][j-1] = playerInput - 48;
                 break;
             }
         }
     }
 }
 
-void readPlayerMovementInGame(duo_vector<char> &cursorPositionInGame, duo_vector<int> &sudokuBoard) {
+void readPlayerMovementInGame(duo_vector<char> &cursorPositionInGame, duo_vector<int> &hiddenSpots, int &noteIsOpen,
+                              std::vector<int> &listOfNotes) {
     int playerInput = _getch();
-
     // Verifies if player's input is a number or not
-    if (playerInput < 49 || playerInput > 57) {
+    if (playerInput < 48 || playerInput > 57) {
         // If player's input is an arrow key
         if (playerInput == 0 || playerInput == 224) {
             int arrowKey = _getch();
@@ -150,12 +196,27 @@ void readPlayerMovementInGame(duo_vector<char> &cursorPositionInGame, duo_vector
                 case 100:
                     updateCursorPosition(playerInput, cursorPositionInGame);
                     break;
+                case 112:
+                    noteIsOpen++;
                 default:
                     break;
             }
         }
-    // If player's input is a number from 1 to 9
+    // If player's input is a number from 0 to 9
     } else {
-        insertNumberInBoard(playerInput, sudokuBoard, cursorPositionInGame);
+        insertNumberInBoard(playerInput, hiddenSpots, cursorPositionInGame);
     }
+}
+
+void readAndDisplay(duo_vector<char> &cursorPositionInGame, duo_vector<int> &sudokuBoard, duo_vector<int> &hiddenSpots,
+                    std::vector<int> &errorList, int &status, std::vector<int> &listOfNotes, int &noteIsOpen) {
+    updateTerminal(0, 0);
+    if (noteIsOpen % 2 == 0) {
+        system("cls");
+    }
+    displayBoard(cursorPositionInGame, sudokuBoard, hiddenSpots, errorList, status, listOfNotes, noteIsOpen);
+    if (status == 0) {
+        return;
+    }
+    readPlayerMovementInGame(cursorPositionInGame, hiddenSpots, noteIsOpen, listOfNotes);
 }

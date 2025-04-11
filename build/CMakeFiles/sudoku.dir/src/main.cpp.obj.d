@@ -175,6 +175,12 @@ CMakeFiles/sudoku.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_numeric.h \
  C:/msys64/ucrt64/include/c++/14.2.0/pstl/glue_numeric_defs.h \
  C:/msys64/ucrt64/include/c++/14.2.0/pstl/execution_defs.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/algorithm \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/algorithmfwd.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_heap.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_tempbuf.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
  C:/msys64/ucrt64/include/windows.h C:/msys64/ucrt64/include/sdkddkver.h \
  C:/msys64/ucrt64/include/excpt.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdarg.h \
@@ -381,6 +387,8 @@ CMakeFiles/sudoku.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/imm.h C:/msys64/ucrt64/include/conio.h \
  C:/msys64/ucrt64/include/sec_api/conio_s.h \
  C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/include/gameinterface.h \
+ C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/include/specialselections.h \
+ C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/include/globalfunctions.h \
  C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/include/generatenumbers.h \
  C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/include/lobbyrendering.h \
  C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/include/stringlibrary.h

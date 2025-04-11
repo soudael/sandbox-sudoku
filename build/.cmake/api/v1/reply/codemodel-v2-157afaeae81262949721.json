@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "Sudoku",
+					"name" : "sudoku",
 					"targetIndexes" : 
 					[
 						0
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "sudoku::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sudoku-Debug-eccfaa4dd1e2d670ed0a.json",
+					"jsonFile" : "target-sudoku-Debug-33e49868c52ab42eb903.json",
 					"name" : "sudoku",
 					"projectIndex" : 0
 				}

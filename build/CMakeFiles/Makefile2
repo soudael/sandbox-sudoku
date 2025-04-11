@@ -84,12 +84,12 @@ clean: CMakeFiles/sudoku.dir/clean
 CMakeFiles/sudoku.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\cdann\OneDrive\Documentos\VSCode\C++\sudoku\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target sudoku"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\cdann\OneDrive\Documentos\VSCode\C++\sudoku\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target sudoku"
 .PHONY : CMakeFiles/sudoku.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sudoku.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\cdann\OneDrive\Documentos\VSCode\C++\sudoku\build\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\cdann\OneDrive\Documentos\VSCode\C++\sudoku\build\CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/sudoku.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\cdann\OneDrive\Documentos\VSCode\C++\sudoku\build\CMakeFiles 0
 .PHONY : CMakeFiles/sudoku.dir/rule
@@ -101,7 +101,7 @@ sudoku: CMakeFiles/sudoku.dir/rule
 # codegen rule for target.
 CMakeFiles/sudoku.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\cdann\OneDrive\Documentos\VSCode\C++\sudoku\build\CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target sudoku"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\cdann\OneDrive\Documentos\VSCode\C++\sudoku\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Finished codegen for target sudoku"
 .PHONY : CMakeFiles/sudoku.dir/codegen
 
 # clean rule for target.

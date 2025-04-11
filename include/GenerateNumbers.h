@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 #include <random>
-#include "generatenumbers.h"
+#include "globalfunctions.h"
 
 template <typename dt>
 using duo_vector = std::vector<std::vector<dt>>;

@@ -1,6 +1,6 @@
-CMakeFiles/sudoku.dir/src/generatenumbers.cpp.obj: \
- C:\Users\cdann\OneDrive\Documentos\VSCode\C++\sudoku\src\generatenumbers.cpp \
- C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/include/generatenumbers.h \
+CMakeFiles/sudoku.dir/src/globalfunctions.cpp.obj: \
+ C:\Users\cdann\OneDrive\Documentos\VSCode\C++\sudoku\src\globalfunctions.cpp \
+ C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/include/globalfunctions.h \
  C:/msys64/ucrt64/include/c++/14.2.0/iostream \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -137,11 +137,6 @@ CMakeFiles/sudoku.dir/src/generatenumbers.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/ostream.tcc \
  C:/msys64/ucrt64/include/c++/14.2.0/istream \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/istream.tcc \
- C:/msys64/ucrt64/include/c++/14.2.0/vector \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_bvector.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/vector.tcc \
  C:/msys64/ucrt64/include/c++/14.2.0/random \
  C:/msys64/ucrt64/include/c++/14.2.0/cmath \
  C:/msys64/ucrt64/include/math.h \
@@ -163,6 +158,11 @@ CMakeFiles/sudoku.dir/src/generatenumbers.cpp.obj: \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
  C:/msys64/ucrt64/include/stdint.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/random.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/vector \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_bvector.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/vector.tcc \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/uniform_int_dist.h \
  C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/opt_random.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/pmmintrin.h \
@@ -174,5 +174,4 @@ CMakeFiles/sudoku.dir/src/generatenumbers.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.2.0/numeric \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_numeric.h \
  C:/msys64/ucrt64/include/c++/14.2.0/pstl/glue_numeric_defs.h \
- C:/msys64/ucrt64/include/c++/14.2.0/pstl/execution_defs.h \
- C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/include/globalfunctions.h
+ C:/msys64/ucrt64/include/c++/14.2.0/pstl/execution_defs.h

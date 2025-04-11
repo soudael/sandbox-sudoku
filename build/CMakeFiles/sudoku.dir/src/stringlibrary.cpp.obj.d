@@ -352,5 +352,4 @@ CMakeFiles/sudoku.dir/src/stringlibrary.cpp.obj: \
  C:/msys64/ucrt64/include/stralign.h \
  C:/msys64/ucrt64/include/sec_api/stralign_s.h \
  C:/msys64/ucrt64/include/winsvc.h C:/msys64/ucrt64/include/mcx.h \
- C:/msys64/ucrt64/include/imm.h \
- C:/Users/cdann/OneDrive/Documentos/VSCode/C++/sudoku/include/stringlibrary.h
+ C:/msys64/ucrt64/include/imm.h

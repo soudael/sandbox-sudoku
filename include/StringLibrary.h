@@ -6,7 +6,6 @@
 #include <string>
 #include <conio.h>
 #include <windows.h>
-#include "stringlibrary.h"
 
 using vector_str = std::vector<std::string>;
 
