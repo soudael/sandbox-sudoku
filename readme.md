@@ -22,19 +22,29 @@ Currently supported only on **Windows**.
 
 ## 🛠️ Installation
 
-### 🔧 Build from Source
+You can run this project in two ways:
 
-Download the source code and compile it using the following command inside the `Sudoku` directory:
+---
 
-```bash
-g++ src\stringlibrary.cpp src\lobbyrendering.cpp src\generatenumbers.cpp src\gameinterface.cpp src\main.cpp src\globalfunctions.cpp src\specialselections.cpp -I include -o sudoku.exe
-```
+### 📦 Option 1: Download Executable
 
-<sub>If you prefer another method to compile, feel free to use your own 😉</sub>
+Simply download the precompiled `.exe` included in the repository and run it directly.  
+No need to build anything yourself — just double-click and play!
 
 > ⚠️ **Warning:**  
 > When running the `.exe`, Windows might show a security alert saying "this file might put your PC at risk".  
 > Click **'More info'** and then **'Run anyway'**.
+
+---
+
+### 🔧 Option 2: Build from Source
+
+Download the source code and compile it manually using the following command inside the `Sudoku` directory:
+
+```bash
+g++ src\stringlibrary.cpp src\lobbyrendering.cpp src\generatenumbers.cpp src\gameinterface.cpp src\main.cpp src\globalfunctions.cpp src\specialselections.cpp -I include -o sudoku.exe
+```
+<sub>If you prefer another method to compile, feel free to use your own 😉</sub>
 
 ---
 
